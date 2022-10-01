@@ -10,7 +10,6 @@ package crud.operations.hr;
  */
 public class CRUDOperationsHR {
 
-    public class Employeeclass {
     private String Name;
     private int EmployeeID ;
     private int Age;
@@ -106,4 +105,4 @@ public class CRUDOperationsHR {
 }
    
     
-}
+
