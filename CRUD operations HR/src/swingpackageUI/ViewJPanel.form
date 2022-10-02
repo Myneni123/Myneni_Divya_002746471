@@ -22,66 +22,70 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="326" max="-2" attributes="0"/>
-                      <Component id="Update" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="Read" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="Delete" min="-2" max="-2" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="260" max="-2" attributes="0"/>
                       <Component id="View" min="-2" pref="183" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="189" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="JoiningDate" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="322" max="-2" attributes="0"/>
+                              <Component id="Update" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Read" min="-2" pref="75" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="189" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="ContactNumber" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="EmailId" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
-                                  <Component id="PositionTitle" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
-                                      <Component id="txtPositionTitle" min="-2" pref="96" max="-2" attributes="0"/>
+                                  <Component id="JoiningDate" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="ContactNumber" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="EmailId" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
+                                          <Component id="PositionTitle" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                                              <Component id="txtPositionTitle" min="-2" pref="96" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="txtContactNumber" alignment="1" pref="96" max="32767" attributes="0"/>
+                                                  <Component id="txtJoiningDate" alignment="1" min="-2" pref="93" max="-2" attributes="0"/>
+                                                  <Component id="txtEmailID" alignment="1" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
                                   </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="txtContactNumber" alignment="1" pref="96" max="32767" attributes="0"/>
-                                          <Component id="txtJoiningDate" alignment="1" min="-2" pref="93" max="-2" attributes="0"/>
-                                          <Component id="txtEmailID" alignment="1" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="Name" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="EmployeeID" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Age" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Gender" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Level" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="TeamInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txtTeamInfo" min="-2" pref="96" max="-2" attributes="0"/>
+                                          <Component id="txtAge" min="-2" pref="96" max="-2" attributes="0"/>
+                                          <Component id="txtEmployeeID" min="-2" pref="96" max="-2" attributes="0"/>
+                                          <Component id="txtName" min="-2" pref="96" max="-2" attributes="0"/>
+                                          <Component id="txtLevel" alignment="0" min="-2" pref="96" max="-2" attributes="0"/>
+                                          <Component id="txtGender" alignment="0" min="-2" pref="96" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="Name" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="EmployeeID" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Age" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Gender" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Level" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="TeamInfo" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtTeamInfo" min="-2" pref="96" max="-2" attributes="0"/>
-                                  <Component id="txtAge" min="-2" pref="96" max="-2" attributes="0"/>
-                                  <Component id="txtEmployeeID" min="-2" pref="96" max="-2" attributes="0"/>
-                                  <Component id="txtName" min="-2" pref="96" max="-2" attributes="0"/>
-                                  <Component id="txtLevel" alignment="0" min="-2" pref="96" max="-2" attributes="0"/>
-                                  <Component id="txtGender" alignment="0" min="-2" pref="96" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
                       </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="Delete" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="543" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
