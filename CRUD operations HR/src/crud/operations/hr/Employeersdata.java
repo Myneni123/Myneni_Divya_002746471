@@ -30,6 +30,9 @@ public CRUDOperationsHR addnewemployee(){
         data.add(newdata);
         return newdata;
 }
+public void DeleteRow(CRUDOperationsHR a){
+    data.remove(a);
+}
     
 }
     
