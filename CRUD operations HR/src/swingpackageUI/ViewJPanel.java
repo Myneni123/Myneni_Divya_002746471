@@ -61,26 +61,12 @@ public class ViewJPanel extends javax.swing.JPanel {
         txtEmailID = new javax.swing.JTextField();
         ContactNumber = new javax.swing.JLabel();
         JoiningDate = new javax.swing.JLabel();
+        Update = new javax.swing.JButton();
 
         View.setText("                VIEW");
 
         EmployeeTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -171,6 +157,13 @@ public class ViewJPanel extends javax.swing.JPanel {
 
         JoiningDate.setText("JoiningDate");
 
+        Update.setText("Update");
+        Update.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UpdateActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -181,7 +174,9 @@ public class ViewJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(439, 439, 439)
+                        .addGap(326, 326, 326)
+                        .addComponent(Update)
+                        .addGap(35, 35, 35)
                         .addComponent(Read)
                         .addGap(18, 18, 18)
                         .addComponent(Delete))
@@ -234,7 +229,8 @@ public class ViewJPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Read)
-                    .addComponent(Delete))
+                    .addComponent(Delete)
+                    .addComponent(Update))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -295,7 +291,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         CRUDOperationsHR SelectedRow = (CRUDOperationsHR) model.getValueAt(selectRowValue,0);
         
        txtName.setText(SelectedRow.getName());
-       txtEmployeeID.setText(SelectedRow.getEmailID());
+      txtEmployeeID.setText(String.valueOf(SelectedRow.getEmployeeID()));
        txtAge.setText(String.valueOf(SelectedRow.getAge()));
        txtGender.setText(SelectedRow.getGender());
        txtLevel.setText(SelectedRow.getLevel());
@@ -374,6 +370,10 @@ public class ViewJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmailIDActionPerformed
 
+    private void UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UpdateActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Age;
@@ -390,6 +390,7 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel PositionTitle;
     private javax.swing.JButton Read;
     private javax.swing.JLabel TeamInfo;
+    private javax.swing.JButton Update;
     private javax.swing.JLabel View;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtContactNumber;
@@ -409,7 +410,7 @@ private void popTable(){
     for(CRUDOperationsHR a: data.getData()){
         
     Object[] r=new Object[5];
-    r[0] = a.getName();
+    r[0] = a;
     r[1] = a.getEmployeeID();
     r[2] = a.getAge();
     r[3] = a.getGender();
