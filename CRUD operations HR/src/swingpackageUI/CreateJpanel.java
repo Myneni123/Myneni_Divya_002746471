@@ -363,7 +363,7 @@ public class CreateJpanel extends javax.swing.JPanel {
            JFileChooser pic = new JFileChooser();
     pic.showOpenDialog(null);
     File f = pic.getSelectedFile();
-    Picture.SetIcon(new ImageIcon(f.toString()));
+   
     FileName=f.getAbsolutePath();
     FilePath.setText(FileName);
         
