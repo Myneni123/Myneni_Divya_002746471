@@ -21,7 +21,7 @@ public class VitalSigns {
     private int RespirationRate;
     private String Created;
     private String Updated;
-    public VitalSigns(double Height,double Systolic,double Diastolic,double Temperature,int PulseRate, int RespirationRate)
+    public VitalSigns(double Height, int PulseRate, int RespirationRate, double Systolic, double Diastolic, int par5, int par6, double Temperature)
     {
         this.Weight=Weight;
         this.Height=Height;
@@ -33,10 +33,8 @@ public class VitalSigns {
         this.Created=formateDate(new Date());
         this.Updated=formateDate(new Date());
         
-        
-                
-    }
-     public VitalSigns(){
+         }
+   public VitalSigns(){
         
     }
 
@@ -46,8 +44,8 @@ public class VitalSigns {
        SimpleDateFormat Simple=new SimpleDateFormat(Formate);
        return Simple.format(date);
     }
-
-    public double getWeight() {
+     
+     public double getWeight() {
         return Weight;
     }
 

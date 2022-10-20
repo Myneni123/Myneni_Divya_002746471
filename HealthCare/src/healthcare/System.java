@@ -7,6 +7,7 @@ package healthcare;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
+import javax.swing.JPanel;
 
 /**
  *
@@ -19,7 +20,7 @@ public class System {
     
     private PatientDirectory patientDirectory;
 
-    public System(List<City> Cities,PersonDirectory personDirectory, PatientDirectory patientDirectory) {
+    public System(List<City> Cities, PersonDirectory personDirectory, PatientDirectory patientDirectory1) {
         this.Cities= Cities;
         this.personDirectory=personDirectory;
         this.patientDirectory=patientDirectory;

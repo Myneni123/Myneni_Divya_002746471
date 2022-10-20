@@ -27,6 +27,14 @@ public class City {
         this.CityName=CityName;
         this.Communities= new ArrayList<Community>();
     }
+     public void addCommunity(Community community){
+        this.Communities.add(community);
+    }
+    
+    public void addCommunities(ArrayList<Community> communities){
+        this.Communities.addAll(communities);
+    }
+    
 
     public String getCityName() {
         return CityName;

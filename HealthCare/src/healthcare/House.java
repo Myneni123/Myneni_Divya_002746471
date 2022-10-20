@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 import java.util.List;
+import javax.swing.JPanel;
 
 /**
  *
@@ -21,6 +22,13 @@ public class House {
     private String Country;
     
     private List<Person> persons;
+
+    public House(String HouseName, String State, String Country) {
+        this.HouseName = HouseName;
+        this.State = State;
+        this.Country = Country;
+        this.persons = new ArrayList<Person>();
+    }
     
     
 
@@ -30,12 +38,7 @@ public class House {
         this.Country = Country;
         this.persons=persons;
     }
-public House(String HouseName, String State, String Country) {
-        this.HouseName=HouseName;
-        this.State = State;
-        this.Country = Country;
-        this.persons= new ArrayList<Person>();
-    }
+
 
     public String getHouseName() {
         return HouseName;
