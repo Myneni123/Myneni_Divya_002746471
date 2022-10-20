@@ -28,7 +28,7 @@ public class PersonPanel extends javax.swing.JPanel {
     /**
      * Creates new form Person
      */
-    public PersonPanel(JPanel displayJPanel1, House house) {
+    public PersonPanel(JPanel displayJPanel, House house) {
         initComponents();
         this.displayJPanel=displayJPanel;
         //this.system=system;
