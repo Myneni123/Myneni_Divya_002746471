@@ -41,9 +41,10 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSplitPane1 = new javax.swing.JSplitPane();
+        SplitPane = new javax.swing.JSplitPane();
         controlJPanel = new javax.swing.JPanel();
         Community = new javax.swing.JButton();
+        Hospital = new javax.swing.JButton();
         displayJPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,12 +56,21 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        Hospital.setText("Hospital");
+        Hospital.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HospitalActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout controlJPanelLayout = new javax.swing.GroupLayout(controlJPanel);
         controlJPanel.setLayout(controlJPanelLayout);
         controlJPanelLayout.setHorizontalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
-                .addComponent(Community, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(controlJPanelLayout.createSequentialGroup()
+                .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Community, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Hospital, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         controlJPanelLayout.setVerticalGroup(
@@ -68,23 +78,25 @@ public class Main extends javax.swing.JFrame {
             .addGroup(controlJPanelLayout.createSequentialGroup()
                 .addGap(104, 104, 104)
                 .addComponent(Community)
-                .addContainerGap(387, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addComponent(Hospital)
+                .addContainerGap(334, Short.MAX_VALUE))
         );
 
-        jSplitPane1.setLeftComponent(controlJPanel);
+        SplitPane.setLeftComponent(controlJPanel);
 
         displayJPanel.setLayout(new java.awt.CardLayout());
-        jSplitPane1.setRightComponent(displayJPanel);
+        SplitPane.setRightComponent(displayJPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addComponent(SplitPane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addComponent(SplitPane)
         );
 
         pack();
@@ -93,11 +105,19 @@ public class Main extends javax.swing.JFrame {
     private void CommunityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CommunityActionPerformed
         // TODO add your handling code here:
           SystemPanel sysJPanel = new SystemPanel(displayJPanel,system);
-        displayJPanel.add("CitiesInformation",sysJPanel);
+         displayJPanel.add("CitiesInformation",sysJPanel);
         CardLayout cardLayout = (CardLayout) displayJPanel.getLayout();
         cardLayout.next(displayJPanel);
                                             
     }//GEN-LAST:event_CommunityActionPerformed
+
+    private void HospitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HospitalActionPerformed
+        // TODO add your handling code here:
+        HospitalLogin hospitalPanel = new HospitalLogin(displayJPanel, system);
+         displayJPanel.add("UserLogin",hospitalPanel);
+        CardLayout cardLayout = (CardLayout) displayJPanel.getLayout();
+        cardLayout.next(displayJPanel);
+    }//GEN-LAST:event_HospitalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -136,8 +156,9 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Community;
+    private javax.swing.JButton Hospital;
+    private javax.swing.JSplitPane SplitPane;
     private javax.swing.JPanel controlJPanel;
     private javax.swing.JPanel displayJPanel;
-    private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables
 }

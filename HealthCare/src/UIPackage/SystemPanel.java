@@ -20,9 +20,9 @@ public class SystemPanel extends javax.swing.JPanel {
     private System System;
     private JPanel displayJpanel;
 
-    public SystemPanel(JPanel displayJpanel, System System) {
+    public SystemPanel(JPanel displayJPanel, System System) {
         this.System = System;
-        this.displayJpanel = displayJpanel;
+        this.displayJpanel =displayJPanel;
         initComponents();
         initializeCities();
     }

@@ -21,20 +21,19 @@ import javax.swing.table.DefaultTableModel;
  */
 public class PatientPanel extends javax.swing.JPanel {
     
-    private healthcare.System System;
+    private System System;
     private House House;
     private JPanel displayJPanel;
 
     /**
      * Creates new form PatientPanel
      */
-    public PatientPanel(JPanel displayJPanel, House house) {
+    public PatientPanel(JPanel displayJPanel,System System) {
         initComponents();
         this.displayJPanel=displayJPanel;
-        //this.system=system;
-        this.House=house;
+        this.System=System;
         populateTable();
-        java.lang.System.out.println("Inside PersonPanel");
+        java.lang.System.out.println("Inside PatientPanel");
     }
     private void populateTable() {
         
