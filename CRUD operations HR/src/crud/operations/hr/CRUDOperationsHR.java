@@ -100,6 +100,10 @@ public class CRUDOperationsHR {
     public void setJoiningDate(String JoiningDate) {
         this.JoiningDate = JoiningDate;
     }
+    @Override
+    public String toString(){
+        return Name;
+    }
     
     
     
