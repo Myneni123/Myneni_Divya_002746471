@@ -15,8 +15,7 @@ public class Encounter {
     public Encounter(VitalSigns vitalSigns) {
         this.vitalSigns=vitalSigns;
     }
-    
-    public Encounter() {
+     public Encounter() {
         this.vitalSigns = new VitalSigns();
     }
 

@@ -17,10 +17,10 @@ public class DataInitializer {
         
         //Boston
         //Person1
-        //VitalSigns(weight,bloodPressure,height,bodyTemperaturee,pulseRate,respirationRate,oxygenSaturation)
-        VitalSigns p1vs1 = new VitalSigns(60.20, 120, 80, 5.11, 38.8, 90, 19, 97.50);
-        VitalSigns p1vs2 = new VitalSigns(63.45, 135, 99, 6.00, 37.7, 90, 18, 99.50);
-        VitalSigns p1vs3 = new VitalSigns(58.21, 98, 89, 6.00, 39.5, 90, 18, 98.00);
+        //VitalSigns(weight,bloodPressure,height,bodyTemperaturee,pulseRate,respirationRate)
+        VitalSigns p1vs1 = new VitalSigns(60.20, 120, 80, 5.11, 38.8, 90, 19);
+        VitalSigns p1vs2 = new VitalSigns(63.45, 135, 99, 6.00, 37.7, 90, 18);
+        VitalSigns p1vs3 = new VitalSigns(58.21, 98, 89, 6.00, 39.5, 90, 18);
 
         Encounter p1Enc1 = new Encounter(p1vs1);
         Encounter p1Enc2 = new Encounter(p1vs2);
@@ -36,9 +36,9 @@ public class DataInitializer {
         Person person1 = new Person("Shiva",23.5,"Male",true,p1);
         
         //Person2
-        VitalSigns p2vs1 = new VitalSigns(65.20, 118, 80, 5.70, 39.8, 94, 19, 95.58);
-        VitalSigns p2vs2 = new VitalSigns(64.60, 85, 95, 5.70, 40.5, 93, 20, 97.78);
-        VitalSigns p2vs3 = new VitalSigns(66.80, 142, 94, 5.70, 38.3, 96, 18, 99.50);
+        VitalSigns p2vs1 = new VitalSigns(65.20, 118, 80, 5.70, 39.8, 94, 19);
+        VitalSigns p2vs2 = new VitalSigns(64.60, 85, 95, 5.70, 40.5, 93, 20);
+        VitalSigns p2vs3 = new VitalSigns(66.80, 142, 94, 5.70, 38.3, 96, 18);
         
         Encounter p2Enc1 = new Encounter(p2vs1);
         Encounter p2Enc2 = new Encounter(p2vs2);
@@ -77,21 +77,21 @@ public class DataInitializer {
         
         //MissionHill
         //Person1
-        VitalSigns vsMHPerson1visit1 = new VitalSigns(55.20, 138, 86, 5.10, 38.8, 95, 19, 97.50);
-        VitalSigns vsMHPerson1visit2 = new VitalSigns(56.45, 122, 87, 6.00, 37.7, 96, 19, 98.50);
-        VitalSigns vsMHPerson1visit3 = new VitalSigns(57.21,143, 89, 6.00, 39.5, 97, 19, 99.50);
+        VitalSigns vsMHPerson1visit1 = new VitalSigns(55.20, 138, 86, 5.10, 38.8, 95, 19);
+        VitalSigns vsMHPerson1visit2 = new VitalSigns(56.45, 122, 87, 6.00, 37.7, 96, 19);
+        VitalSigns vsMHPerson1visit3 = new VitalSigns(57.21,143, 89, 6.00, 39.5, 97, 19);
 
         //Person2
-        VitalSigns vsMHPerson2visit1 = new VitalSigns(65.20, 111, 72, 5.70, 39.8, 94, 19, 95.58);
-        VitalSigns vsMHPerson2visit2 = new VitalSigns(64.60, 125, 95, 5.70, 40.5, 93, 20, 97.78);
+        VitalSigns vsMHPerson2visit1 = new VitalSigns(65.20, 111, 72, 5.70, 39.8, 94, 19);
+        VitalSigns vsMHPerson2visit2 = new VitalSigns(64.60, 125, 95, 5.70, 40.5, 93, 20);
 
         //Roxubory
         //Person1
-        VitalSigns vsRBPerson1visit1 = new VitalSigns(46.20, 128, 83, 5.10, 38.8, 95, 19, 99.50);
-        VitalSigns vsRBPerson1visit2 = new VitalSigns(48.45, 102, 89, 5.10, 38.7, 96, 19, 98.50);
+        VitalSigns vsRBPerson1visit1 = new VitalSigns(46.20, 128, 83, 5.10, 38.8, 95, 19);
+        VitalSigns vsRBPerson1visit2 = new VitalSigns(48.45, 102, 89, 5.10, 38.7, 96, 19);
         
         //Person2
-        VitalSigns vsRBPerson2visit1 = new VitalSigns(55.20, 136, 86, 5.10, 38.8, 95, 19, 97.50);
+        VitalSigns vsRBPerson2visit1 = new VitalSigns(55.20, 136, 86, 5.10, 38.8, 95, 19);
         
         List<City> cities = new ArrayList<>();
         cities.add(bostonCity);

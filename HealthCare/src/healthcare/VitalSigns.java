@@ -21,7 +21,7 @@ public class VitalSigns {
     private int RespirationRate;
     private String Created;
     private String Updated;
-    public VitalSigns(double Height, int PulseRate, int RespirationRate, double Systolic, double Diastolic, int par5, int par6, double Temperature)
+    public VitalSigns(double Weight,double Systolic, double Diastolic,double Height,double Temperature,int PulseRate, int RespirationRate)
     {
         this.Weight=Weight;
         this.Height=Height;
