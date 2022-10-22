@@ -43,7 +43,6 @@ public class VitalSignsPanel extends javax.swing.JPanel {
         Temperature.setText(String.valueOf(vitalSigns.getTemperature()));
         txtpulseRate.setText(String.valueOf(vitalSigns.getPulseRate()));
         txtrespirationRate.setText(String.valueOf(vitalSigns.getRespirationRate()));
-        lblcreatedonOUT.setText(vitalSigns.getCreated());
         lblupdatedonOUT.setText(vitalSigns.getUpdated());
         
     }
@@ -81,9 +80,6 @@ public class VitalSignsPanel extends javax.swing.JPanel {
 
         lblcreatedon.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lblcreatedon.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblcreatedon.setText("Created On :");
-
-        lblcreatedonOUT.setText("h");
 
         lblupdatedon.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lblupdatedon.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -92,8 +88,6 @@ public class VitalSignsPanel extends javax.swing.JPanel {
         vitalSignsJLabel.setFont(new java.awt.Font("Lucida Grande", 1, 20)); // NOI18N
         vitalSignsJLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         vitalSignsJLabel.setText("Vital Signs");
-
-        lblupdatedonOUT.setText("h");
 
         weightJLabel.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         weightJLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -114,7 +108,8 @@ public class VitalSignsPanel extends javax.swing.JPanel {
         heightJLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         heightJLabel.setText("Height :");
 
-        backJButton.setText("< < Back");
+        backJButton.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        backJButton.setText("previous");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
@@ -149,60 +144,58 @@ public class VitalSignsPanel extends javax.swing.JPanel {
                         .addGap(61, 61, 61)
                         .addComponent(vitalSignsJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
+                        .addGap(28, 28, 28)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(168, 168, 168)
-                                .addComponent(updateJButton))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblupdatedon)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(34, 34, 34)
-                                                .addComponent(weightJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(89, 89, 89))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                                .addGap(4, 4, 4)
-                                                .addComponent(bloodPressureSystolicJLabel)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                                         .addGroup(layout.createSequentialGroup()
-                                            .addComponent(bloodPressureDiastolicJLabel)
-                                            .addGap(82, 82, 82)))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(Diastolic, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(Systolic, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtweight, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(lblupdatedon)
+                                            .addGap(93, 93, 93)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(heightJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(pulseRateJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(respirationRateJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(86, 86, 86)
+                                            .addComponent(bodyTemperatureJLabel))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(137, 137, 137)
+                                            .addComponent(lblcreatedon))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(117, 117, 117)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(8, 8, 8)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(heightJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(pulseRateJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(respirationRateJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(1, 1, 1)
-                                                .addComponent(bodyTemperatureJLabel))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(52, 52, 52)
-                                                .addComponent(lblcreatedon))))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblupdatedonOUT)
+                                            .addComponent(lblcreatedonOUT, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(98, 98, 98)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(txtrespirationRate, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                                            .addComponent(txtpulseRate)
+                                            .addComponent(Temperature)
+                                            .addComponent(txtheight)
+                                            .addComponent(Diastolic)
+                                            .addComponent(Systolic)
+                                            .addComponent(txtweight)))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(168, 168, 168)
+                                    .addComponent(updateJButton))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addGroup(layout.createSequentialGroup()
-                                            .addGap(82, 82, 82)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(Temperature, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(txtheight, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(txtpulseRate, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(txtrespirationRate, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(117, 117, 117)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(lblupdatedonOUT)
-                                                .addComponent(lblcreatedonOUT, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)))))))))
-                .addContainerGap(241, Short.MAX_VALUE))
+                                            .addGap(34, 34, 34)
+                                            .addComponent(weightJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(224, 224, 224))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addGap(4, 4, 4)
+                                            .addComponent(bloodPressureSystolicJLabel)
+                                            .addGap(217, 217, 217)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(bloodPressureDiastolicJLabel)
+                                        .addGap(217, 217, 217)))))))
+                .addContainerGap(234, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -249,7 +242,7 @@ public class VitalSignsPanel extends javax.swing.JPanel {
                     .addComponent(lblupdatedonOUT))
                 .addGap(7, 7, 7)
                 .addComponent(updateJButton)
-                .addContainerGap())
+                .addContainerGap(28, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

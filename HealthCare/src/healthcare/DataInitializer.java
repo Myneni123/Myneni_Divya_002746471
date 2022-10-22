@@ -65,6 +65,7 @@ public class DataInitializer {
         List<Community> jpCommunities = new ArrayList<>();
         jpCommunities.add(jpCommunity);
         
+        
         //CityList citylist = new 
         City bostonCity = CityList.getCitiesList().get(0);
         bostonCity.addCommunity(jpCommunity);
@@ -97,10 +98,10 @@ public class DataInitializer {
         cities.add(bostonCity);
         
         
-        List<Person> parentsList = new ArrayList<>();
-        parentsList.add(person1);
-        parentsList.add(person2);
-        PersonDirectory personDirectory = new PersonDirectory(parentsList);
+        List<Person> personsList = new ArrayList<>();
+        personsList.add(person1);
+        personsList.add(person2);
+        PersonDirectory personDirectory = new PersonDirectory(personsList);
         
         List<Patient> patientsList = new ArrayList<>();
         patientsList.add(p1);
@@ -110,5 +111,8 @@ public class DataInitializer {
         
         return system;
     }
+    
+   
+    
     
 }

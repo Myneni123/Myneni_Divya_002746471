@@ -11,22 +11,22 @@ import java.util.List;
  * @author mynenidivya
  */
 public class EncounterHistory {
-    private List<Encounter> Encounters;
+    private List<Encounter> encounters;
 
     public EncounterHistory(List<Encounter> encounters) {
-        this.Encounters = Encounters;
+        this.encounters = encounters;
     }
     
     public EncounterHistory() {
-        this.Encounters = new ArrayList<Encounter>();
+        this.encounters = new ArrayList<Encounter>();
     }
 
     public List<Encounter> getEncounters() {
-        return Encounters;
+        return encounters;
     }
 
     public void setEncounters(List<Encounter> Encounters) {
-        this.Encounters = Encounters;
+        this.encounters = Encounters;
     }
     
 }

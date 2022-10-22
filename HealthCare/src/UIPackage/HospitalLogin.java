@@ -4,10 +4,15 @@
  */
 package UIPackage;
 
+import healthcare.House;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import healthcare.System;
 import java.awt.CardLayout;
+import healthcare.Patient;
+
+import static java.time.Clock.system;
+import static java.time.InstantSource.system;
 
 /**
  *
@@ -16,15 +21,17 @@ import java.awt.CardLayout;
 public class HospitalLogin extends javax.swing.JPanel {
     private System system;
     private JPanel displayJpanel;
+    private House house;
 
 
     /**
      * Creates new form HospitalLogin
      */
-    public HospitalLogin(JPanel displayJPanel, System System) {    
+    public HospitalLogin(JPanel displayJPanel, System system) {    
         initComponents();
-        this.system =System;
+        this.system =system;
         this.displayJpanel=displayJPanel;
+        
     }
 
     /**
@@ -62,7 +69,11 @@ public class HospitalLogin extends javax.swing.JPanel {
             }
         });
 
-        PasswordField.setText("jPasswordField1");
+        PasswordField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PasswordFieldActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -90,10 +101,10 @@ public class HospitalLogin extends javax.swing.JPanel {
                             .addComponent(Password))
                         .addGap(139, 139, 139)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(PasswordField)
-                            .addComponent(UserField)))
+                            .addComponent(UserField, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                            .addComponent(PasswordField)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(218, 218, 218)
+                        .addGap(206, 206, 206)
                         .addComponent(jButton1)))
                 .addContainerGap(210, Short.MAX_VALUE))
         );
@@ -112,9 +123,9 @@ public class HospitalLogin extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(Password)
                     .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(93, 93, 93))
+                .addGap(103, 103, 103))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -127,13 +138,26 @@ public class HospitalLogin extends javax.swing.JPanel {
         String User=UserField.getText();
         String Password=PasswordField.getText();
         
-        if(User.equals("Admin")&&Password.equals("Admin"))
+        if(UserField.getText().equals("Admin")&&PasswordField.getText().equals("Admin"))
         {
            
+          Search hospitalPanel = new Search(displayJpanel, system);
+         displayJpanel.add("UserLogin",hospitalPanel);
+        CardLayout cardLayout = (CardLayout) displayJpanel.getLayout();
+        cardLayout.next(displayJpanel);
+    } 
        
         
+        
+        else
+        {
+            JOptionPane.showMessageDialog(this, "Username or password invailid");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void PasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PasswordFieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

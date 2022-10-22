@@ -4,9 +4,12 @@
  */
 package UIPackage;
 
+import healthcare.Community;
 import healthcare.House;
 import healthcare.Patient;
+
 import healthcare.Person;
+import healthcare.PersonDirectory;
 import java.awt.CardLayout;
 import java.awt.Panel;
 import java.text.SimpleDateFormat;
@@ -14,6 +17,7 @@ import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+import healthcare.System;
 
 /**
  *
@@ -21,24 +25,35 @@ import javax.swing.table.DefaultTableModel;
  */
 public class PatientPanel extends javax.swing.JPanel {
     
-    private System System;
-    private House House;
+    private System system;
+   
     private JPanel displayJPanel;
+    private String selectedhouse;
+    private House House;
+    private Community Community;
 
     /**
      * Creates new form PatientPanel
      */
-    public PatientPanel(JPanel displayJPanel,System System) {
+    
+       public PatientPanel(JPanel displayJPanel, String selectedhouse,Community Community) {
+       this.displayJPanel = displayJPanel;
+        this.selectedhouse=selectedhouse;
+        this.Community=Community;
+        //this.system=system;
         initComponents();
-        this.displayJPanel=displayJPanel;
-        this.System=System;
         populateTable();
         java.lang.System.out.println("Inside PatientPanel");
     }
-    private void populateTable() {
-        
+
+       private void populateTable() {
         DefaultTableModel model = (DefaultTableModel) patientsJTable.getModel();
         model.setRowCount(0);
+       
+            for(House house : this.Community.getHouses()) {
+            if(house.getHouseName().equalsIgnoreCase(selectedhouse)){
+                this.House=house;
+            
         
         for(Person person:House.getPersons()){
             Object[] row = new Object[4];
@@ -50,6 +65,8 @@ public class PatientPanel extends javax.swing.JPanel {
             model.addRow(row);
         }
     }
+            }
+       }
     
     String regxPatientName = "^[a-zA-Z\\s]+$";
     String regxAge = "^[0-9]{0,2}+\\.?[0-9]{0,2}$";
@@ -60,7 +77,6 @@ public class PatientPanel extends javax.swing.JPanel {
        SimpleDateFormat Simple=new SimpleDateFormat(Formate);
        return Simple.format(date);
     }
-     
         
 
     /**

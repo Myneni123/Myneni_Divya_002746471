@@ -72,7 +72,8 @@ public class AddingNewVitals extends javax.swing.JPanel {
         bloodPressureDiastolicJLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         bloodPressureDiastolicJLabel.setText("Blood Pressure Diastolic :");
 
-        backJButton.setText("< < Back");
+        backJButton.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        backJButton.setText("Previous");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);

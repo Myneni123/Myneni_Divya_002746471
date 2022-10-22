@@ -6,8 +6,10 @@ package UIPackage;
 
 
 import healthcare.DataInitializer;
+import healthcare.House;
 import java.awt.CardLayout;
 import healthcare.System;
+import healthcare.Patient;
 /**
  *
  * @author mynenidivya
@@ -18,6 +20,7 @@ public class Main extends javax.swing.JFrame {
      * Creates new form Main
      */
     private System system;
+    private House house;
     
      public Main() {
          initComponents();
@@ -48,6 +51,8 @@ public class Main extends javax.swing.JFrame {
         displayJPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        controlJPanel.setBackground(new java.awt.Color(51, 51, 51));
 
         Community.setText("Community");
         Community.addActionListener(new java.awt.event.ActionListener() {
@@ -113,7 +118,7 @@ public class Main extends javax.swing.JFrame {
 
     private void HospitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HospitalActionPerformed
         // TODO add your handling code here:
-        HospitalLogin hospitalPanel = new HospitalLogin(displayJPanel, system);
+       HospitalLogin hospitalPanel = new HospitalLogin(displayJPanel, system);
          displayJPanel.add("UserLogin",hospitalPanel);
         CardLayout cardLayout = (CardLayout) displayJPanel.getLayout();
         cardLayout.next(displayJPanel);
