@@ -40,6 +40,8 @@ public class HousePanel extends javax.swing.JPanel {
        SimpleDateFormat Simple=new SimpleDateFormat(Formate);
        return Simple.format(date);
     }
+      String regxName = "^[a-zA-Z\\s]+$";
+    String regxNum= "^[0-9]*$";
      
     
 
@@ -261,6 +263,7 @@ public class HousePanel extends javax.swing.JPanel {
                 return;
             }
         }
+        if (txthousename.getText().matches(regxName) && txtstate.getText().matches(regxName)&&txtcountry.getText().matches(regxName)){
 
         House house = new House(txthousename.getText(), txtstate.getText(), txtcountry.getText());
         Community.getHouses().add(house);
@@ -269,6 +272,9 @@ public class HousePanel extends javax.swing.JPanel {
         txthousename.setText("");
         txtstate.setText("");
         txtcountry.setText("");
+        }else{
+            JOptionPane.showMessageDialog(this, "Please enter valid details");
+        }
     }//GEN-LAST:event_addJButtonActionPerformed
 
     private void deleteJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteJButtonActionPerformed
@@ -278,7 +284,7 @@ public class HousePanel extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel) housesJTable.getModel();
-        HousePanel house = (HousePanel) model.getValueAt(selectedRowIndex, 0);
+        House house = (House) model.getValueAt(selectedRowIndex, 0);
 
         Community.getHouses().remove(house);
 
@@ -308,6 +314,7 @@ public class HousePanel extends javax.swing.JPanel {
             return;
         }
         else{
+            if (txthousename.getText().matches(regxName) && txtstate.getText().matches(regxName)&&txtcountry.getText().matches(regxName)){
             house.setHouseName(txthousename.getText());
             house.setState(txtstate.getText());
             house.setCountry(txtcountry.getText());
@@ -318,6 +325,9 @@ public class HousePanel extends javax.swing.JPanel {
             txthousename.setText("");
             txtstate.setText("");
             txtcountry.setText("");
+        }else{
+                JOptionPane.showMessageDialog(this, "Enter valid details");
+            }
         }
     }
     private void populateHouses() {

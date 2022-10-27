@@ -167,7 +167,7 @@ public class PatientPanel extends javax.swing.JPanel {
 
         lblcommunityName.setText("Gender : ");
 
-        lblpersonname.setText("Person Name : ");
+        lblpersonname.setText("Patient Name : ");
 
         lblage.setText("Age :");
 

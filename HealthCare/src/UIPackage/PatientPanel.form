@@ -204,7 +204,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblpersonname">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Person Name : "/>
+        <Property name="text" type="java.lang.String" value="Patient Name : "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblage">

@@ -23,7 +23,7 @@ public class PersonPanel extends javax.swing.JPanel {
     
 
     private System System;
-    private House House;
+    private House house;
     private JPanel displayJPanel;
     /**
      * Creates new form Person
@@ -32,7 +32,7 @@ public class PersonPanel extends javax.swing.JPanel {
         initComponents();
         this.displayJPanel=displayJPanel;
         //this.system=system;
-        this.House=house;
+        this.house=house;
         initComponents();
         populateTable();
         java.lang.System.out.println("Inside PersonPanel");
@@ -42,7 +42,7 @@ public class PersonPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) personsJTable.getModel();
         model.setRowCount(0);
         
-        for(Person person:House.getPersons()){
+        for(Person person:house.getPersons()){
             Object[] row = new Object[4];
             row[0]=person;
             row[1]=person.getAge();
@@ -262,7 +262,7 @@ public class PersonPanel extends javax.swing.JPanel {
         }
         DefaultTableModel model = (DefaultTableModel) personsJTable.getModel();
 
-        for(Person person:House.getPersons()){
+        for(Person person:house.getPersons()){
             if (txtpersonname.getText().equals(person.getName())){
                 JOptionPane.showMessageDialog(this, "Person name already exists\nPlease enter a different person name");
                 return;
@@ -277,7 +277,7 @@ public class PersonPanel extends javax.swing.JPanel {
             double age = txtage.getText().isBlank()?0:Double.parseDouble(txtage.getText());
 
             Person person = new Person(txtpersonname.getText(), age, gender, chkbxmarried.isSelected(),new Patient());
-            House.getPersons().add(person);
+            house.getPersons().add(person);
             populateTable();
 
             txtpersonname.setText("");
@@ -339,7 +339,7 @@ public class PersonPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) personsJTable.getModel();
         Person person = (Person) model.getValueAt(selectedRowIndex, 0);
 
-        House.getPersons().remove(person);
+        house.getPersons().remove(person);
 
         txtpersonname.setText("");
         txtgender.setSelectedIndex(0);
