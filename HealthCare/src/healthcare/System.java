@@ -20,7 +20,7 @@ public class System {
     
     private PatientDirectory patientDirectory;
 
-    public System(List<City> Cities, PersonDirectory personDirectory, PatientDirectory patientDirectory1) {
+    public System(List<City> Cities, PersonDirectory personDirectory, PatientDirectory patientDirectory) {
         this.Cities= Cities;
         this.personDirectory=personDirectory;
         this.patientDirectory=patientDirectory;

@@ -4,6 +4,7 @@
  */
 package healthcare;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,16 +13,63 @@ import java.util.List;
  */
 public class Hospital {
     private String HospitalName;
-      private List<City> Cities;
+    
+    private String State;
+    
+    private String Country;
+    
+    private List<Doctor> Doctors;
 
-    public Hospital(String HospitalName, List<City> Cities) {
+    public Hospital(String HospitalName, String State, String Country, List<Doctor> Doctors) {
         this.HospitalName = HospitalName;
-        this.Cities = Cities;
+        this.State = State;
+        this.Country = Country;
+        this.Doctors = Doctors;
     }
-    public Hospital(String HospitalName) {
+    public Hospital(String HospitalName, String State, String Country) {
         this.HospitalName = HospitalName;
-        this.Cities = Cities;
+        this.State = State;
+        this.Country = Country;
+        this.Doctors = new ArrayList<Doctor>();
     }
-      
+    
+     public String getHospitalName() {
+        return HospitalName;
+    }
+
+    public void setHospitalName(String HospitalName) {
+        this.HospitalName = HospitalName;
+    }
+
+    public String getState() {
+        return State;
+    }
+
+    public void setState(String State) {
+        this.State = State;
+    }
+
+    public String getCountry() {
+        return Country;
+    }
+
+    public void setCountry(String Country) {
+        this.Country = Country;
+    }
+
+    public List<Doctor> getDoctors() {
+        return Doctors;
+    }
+
+    public void setDoctors(List<Doctor> Doctors) {
+        this.Doctors = Doctors;
+    }
+     @Override
+    public String toString(){
+    return HospitalName;
+}
+    
+    
     
 }
+    

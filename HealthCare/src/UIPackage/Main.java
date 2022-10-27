@@ -5,11 +5,13 @@
 package UIPackage;
 
 
+import healthcare.DataHospital;
 import healthcare.DataInitializer;
 import healthcare.House;
 import java.awt.CardLayout;
 import healthcare.System;
 import healthcare.Patient;
+import healthcare.System1;
 /**
  *
  * @author mynenidivya
@@ -21,10 +23,11 @@ public class Main extends javax.swing.JFrame {
      */
     private System system;
     private House house;
-    
+    private System1 System;
      public Main() {
          initComponents();
         initializeData();
+        initialize1Data();
         setDefaultRightComponent();
     }
      private void setDefaultRightComponent() {
@@ -34,7 +37,9 @@ public class Main extends javax.swing.JFrame {
     private void initializeData() {
         system = DataInitializer.initializeSystem();
     }
-    
+     private void initialize1Data() {
+        System = DataHospital.initializeSystem();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -48,6 +53,8 @@ public class Main extends javax.swing.JFrame {
         controlJPanel = new javax.swing.JPanel();
         Community = new javax.swing.JButton();
         Hospital = new javax.swing.JButton();
+        HOS = new javax.swing.JButton();
+        PAT = new javax.swing.JButton();
         displayJPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -61,22 +68,30 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        Hospital.setText("Hospital");
+        Hospital.setText("Doctor");
         Hospital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HospitalActionPerformed(evt);
             }
         });
 
+        HOS.setText("Hospital");
+        HOS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HOSActionPerformed(evt);
+            }
+        });
+
+        PAT.setText("Patient");
+
         javax.swing.GroupLayout controlJPanelLayout = new javax.swing.GroupLayout(controlJPanel);
         controlJPanel.setLayout(controlJPanelLayout);
         controlJPanelLayout.setHorizontalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(controlJPanelLayout.createSequentialGroup()
-                .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Community, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Hospital, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+            .addComponent(HOS, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PAT, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Hospital, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Community, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
         );
         controlJPanelLayout.setVerticalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -85,7 +100,11 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(Community)
                 .addGap(30, 30, 30)
                 .addComponent(Hospital)
-                .addContainerGap(334, Short.MAX_VALUE))
+                .addGap(37, 37, 37)
+                .addComponent(HOS)
+                .addGap(37, 37, 37)
+                .addComponent(PAT)
+                .addContainerGap(214, Short.MAX_VALUE))
         );
 
         SplitPane.setLeftComponent(controlJPanel);
@@ -124,6 +143,14 @@ public class Main extends javax.swing.JFrame {
         cardLayout.next(displayJPanel);
     }//GEN-LAST:event_HospitalActionPerformed
 
+    private void HOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HOSActionPerformed
+        // TODO add your handling code here:
+        CityPanel Panel = new CityPanel(displayJPanel, System);
+         displayJPanel.add("UserLogin",Panel);
+        CardLayout cardLayout = (CardLayout) displayJPanel.getLayout();
+        cardLayout.next(displayJPanel);
+    }//GEN-LAST:event_HOSActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -161,7 +188,9 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Community;
+    private javax.swing.JButton HOS;
     private javax.swing.JButton Hospital;
+    private javax.swing.JButton PAT;
     private javax.swing.JSplitPane SplitPane;
     private javax.swing.JPanel controlJPanel;
     private javax.swing.JPanel displayJPanel;
