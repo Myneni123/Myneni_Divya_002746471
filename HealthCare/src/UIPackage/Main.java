@@ -59,7 +59,7 @@ public class Main extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        controlJPanel.setBackground(new java.awt.Color(51, 51, 51));
+        controlJPanel.setBackground(new java.awt.Color(255, 204, 204));
 
         Community.setText("Community");
         Community.addActionListener(new java.awt.event.ActionListener() {
@@ -83,6 +83,11 @@ public class Main extends javax.swing.JFrame {
         });
 
         PAT.setText("Patient");
+        PAT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PATActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout controlJPanelLayout = new javax.swing.GroupLayout(controlJPanel);
         controlJPanel.setLayout(controlJPanelLayout);
@@ -150,6 +155,14 @@ public class Main extends javax.swing.JFrame {
         CardLayout cardLayout = (CardLayout) displayJPanel.getLayout();
         cardLayout.next(displayJPanel);
     }//GEN-LAST:event_HOSActionPerformed
+
+    private void PATActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PATActionPerformed
+        // TODO add your handling code here:
+        OPPanel1 Panel = new OPPanel1(displayJPanel, System);
+         displayJPanel.add("UserLogin",Panel);
+        CardLayout cardLayout = (CardLayout) displayJPanel.getLayout();
+        cardLayout.next(displayJPanel);
+    }//GEN-LAST:event_PATActionPerformed
 
     /**
      * @param args the command line arguments

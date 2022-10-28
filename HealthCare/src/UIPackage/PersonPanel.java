@@ -90,9 +90,16 @@ public class PersonPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         personsJTable = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(255, 204, 204));
+
         chkbxmarried.setText("Married ?");
 
         txtgender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Male", "Female" }));
+        txtgender.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtgenderActionPerformed(evt);
+            }
+        });
 
         backJButton.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         backJButton.setText("previous");
@@ -365,6 +372,10 @@ public class PersonPanel extends javax.swing.JPanel {
         txtage.setText(String.valueOf(person.getAge()));
         chkbxmarried.setSelected(person.isMarried());
     }//GEN-LAST:event_personsJTableMouseClicked
+
+    private void txtgenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtgenderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtgenderActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

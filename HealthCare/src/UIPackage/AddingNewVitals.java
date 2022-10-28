@@ -60,6 +60,8 @@ public class AddingNewVitals extends javax.swing.JPanel {
         respirationRateJLabel = new javax.swing.JLabel();
         addJButton = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 204, 204));
+
         bloodPressureSystolicJLabel.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         bloodPressureSystolicJLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         bloodPressureSystolicJLabel.setText("Blood Pressure Systolic :");

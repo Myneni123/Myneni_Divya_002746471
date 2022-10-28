@@ -78,6 +78,8 @@ public class VitalSignsPanel extends javax.swing.JPanel {
         bloodPressureDiastolicJLabel = new javax.swing.JLabel();
         respirationRateJLabel = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 204, 204));
+
         lblcreatedon.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lblcreatedon.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
 

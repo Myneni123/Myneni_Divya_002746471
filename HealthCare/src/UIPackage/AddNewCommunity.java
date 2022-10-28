@@ -51,6 +51,8 @@ public class AddNewCommunity extends javax.swing.JPanel {
         backJButton = new javax.swing.JButton();
         lblpopulation = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 204, 204));
+
         addCommunityJLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         addCommunityJLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         addCommunityJLabel.setText("Add New Community");
@@ -84,20 +86,22 @@ public class AddNewCommunity extends javax.swing.JPanel {
                         .addGap(32, 32, 32)
                         .addComponent(backJButton)
                         .addGap(65, 65, 65)
+                        .addComponent(addCommunityJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(addCommunityJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(communityNameJLabel)
                                     .addComponent(lblpopulation))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtcommunityname, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
-                                    .addComponent(txtpopulation)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(269, 269, 269)
-                        .addComponent(addJButton)))
-                .addContainerGap(208, Short.MAX_VALUE))
+                                    .addComponent(txtcommunityname)
+                                    .addComponent(txtpopulation, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(80, 80, 80)
+                                .addComponent(addJButton)))))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

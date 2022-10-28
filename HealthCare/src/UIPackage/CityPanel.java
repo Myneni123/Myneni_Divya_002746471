@@ -10,6 +10,7 @@ import healthcare.HospitalCity;
 import healthcare.HospitalCities;
 import java.awt.CardLayout;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -53,10 +54,17 @@ public class CityPanel extends javax.swing.JPanel {
         chooseCityJLabel = new javax.swing.JLabel();
         cityJComboBox = new javax.swing.JComboBox<>();
         btnnext = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        User = new javax.swing.JLabel();
+        Password = new javax.swing.JLabel();
+        UserField = new javax.swing.JTextField();
+        PasswordField = new javax.swing.JPasswordField();
+
+        setBackground(new java.awt.Color(255, 204, 204));
 
         manageSystemJLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         manageSystemJLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        manageSystemJLabel.setText("City Health Care System");
+        manageSystemJLabel.setText("Hospital Administration");
 
         chooseCityJLabel.setText("City :");
 
@@ -66,10 +74,28 @@ public class CityPanel extends javax.swing.JPanel {
             }
         });
 
-        btnnext.setText("Next");
+        btnnext.setText("Login");
         btnnext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnnextActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/healthpic3.jpeg"))); // NOI18N
+
+        User.setText("User");
+
+        Password.setText("Password");
+
+        UserField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UserFieldActionPerformed(evt);
+            }
+        });
+
+        PasswordField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PasswordFieldActionPerformed(evt);
             }
         });
 
@@ -80,29 +106,56 @@ public class CityPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
+                        .addGap(27, 27, 27)
+                        .addComponent(chooseCityJLabel)
+                        .addGap(41, 41, 41)
+                        .addComponent(cityJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(78, 78, 78)
                         .addComponent(manageSystemJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addComponent(chooseCityJLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(210, 210, 210)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnnext)
-                            .addComponent(cityJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(100, 100, 100)
+                                .addComponent(btnnext))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(User)
+                                    .addComponent(Password))
+                                .addGap(139, 139, 139)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(UserField)
+                                    .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(231, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
+                .addContainerGap()
                 .addComponent(manageSystemJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cityJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(chooseCityJLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(29, 29, 29)
-                .addComponent(btnnext)
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(187, 187, 187)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(chooseCityJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cityJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(User)
+                            .addComponent(UserField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Password)
+                            .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnnext)))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -112,6 +165,10 @@ public class CityPanel extends javax.swing.JPanel {
 
     private void btnnextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnextActionPerformed
         // TODO add your handling code here:
+        String User=UserField.getText();
+        String Password=PasswordField.getText();
+         if(UserField.getText().equals("Root")&&PasswordField.getText().equals("Root"))
+        {
         String selectedCity = String.valueOf(cityJComboBox.getSelectedItem());
         java.lang.System.out.println(selectedCity);
 
@@ -119,13 +176,33 @@ public class CityPanel extends javax.swing.JPanel {
         displayJpanel.add("ManagePanel", hospital);
         CardLayout layout = (CardLayout) displayJpanel.getLayout();
         layout.next(displayJpanel);
+        }
+         
+        else
+        {
+            JOptionPane.showMessageDialog(this, "Username or password invailid");
+        
+        }
     }//GEN-LAST:event_btnnextActionPerformed
+
+    private void UserFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UserFieldActionPerformed
+
+    private void PasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PasswordFieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Password;
+    private javax.swing.JPasswordField PasswordField;
+    private javax.swing.JLabel User;
+    private javax.swing.JTextField UserField;
     private javax.swing.JButton btnnext;
     private javax.swing.JLabel chooseCityJLabel;
     private javax.swing.JComboBox<String> cityJComboBox;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel manageSystemJLabel;
     // End of variables declaration//GEN-END:variables
 }

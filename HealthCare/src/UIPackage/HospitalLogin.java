@@ -52,6 +52,8 @@ public class HospitalLogin extends javax.swing.JPanel {
         PasswordField = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 204, 204));
+
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/healthpic2.jpeg"))); // NOI18N
         jLabel1.setText("HospitalManagament");
