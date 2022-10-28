@@ -1,4 +1,9 @@
 # Myneni_Divya_002746471
-Its about the CRUD operations for HR Managment
-So that we can manage Employee profiles 
-It's easy for the user to acess the records present
+The main objective of developing this application was to manage the patients and their vital sign records easily. This application was developed with Java-Swing.
+
+The use cases of this application are:
+
+Patients can make appointments with the nearby city hospitals.
+Doctors will be able to leave a record of the vital Signs
+Different administrators will be able to perform different operations for the model/application.
+All administrators should be able to perform CRUD operations on their systems
