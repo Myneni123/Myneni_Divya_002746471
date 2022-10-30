@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author mynenidivya
  */
-public class Search extends javax.swing.JPanel {
+public class Selection extends javax.swing.JPanel {
      private JPanel displayJpanel;
     private System system;
     private City city;
@@ -27,7 +27,7 @@ public class Search extends javax.swing.JPanel {
     /**
      * Creates new form Search
      */
-    public Search(JPanel displayJpanel, System system) {
+    public Selection(JPanel displayJpanel, System system) {
         initComponents();
         this.displayJpanel = displayJpanel;
         this.system = system;

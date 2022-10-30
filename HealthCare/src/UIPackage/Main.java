@@ -55,6 +55,7 @@ public class Main extends javax.swing.JFrame {
         Hospital = new javax.swing.JButton();
         HOS = new javax.swing.JButton();
         PAT = new javax.swing.JButton();
+        Search = new javax.swing.JButton();
         displayJPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -89,6 +90,13 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        Search.setText("Search");
+        Search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout controlJPanelLayout = new javax.swing.GroupLayout(controlJPanel);
         controlJPanel.setLayout(controlJPanelLayout);
         controlJPanelLayout.setHorizontalGroup(
@@ -97,6 +105,7 @@ public class Main extends javax.swing.JFrame {
             .addComponent(PAT, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(Hospital, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(Community, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
+            .addComponent(Search, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         controlJPanelLayout.setVerticalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,7 +118,9 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(HOS)
                 .addGap(37, 37, 37)
                 .addComponent(PAT)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addComponent(Search)
+                .addContainerGap(160, Short.MAX_VALUE))
         );
 
         SplitPane.setLeftComponent(controlJPanel);
@@ -164,6 +175,16 @@ public class Main extends javax.swing.JFrame {
         cardLayout.next(displayJPanel);
     }//GEN-LAST:event_PATActionPerformed
 
+    private void SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchActionPerformed
+        // TODO add your handling code here:
+        SearchPanel search = new SearchPanel(displayJPanel,system);
+         displayJPanel.add("CitiesInformation",search);
+        CardLayout cardLayout = (CardLayout) displayJPanel.getLayout();
+        cardLayout.next(displayJPanel);
+        
+        
+    }//GEN-LAST:event_SearchActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -204,6 +225,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton HOS;
     private javax.swing.JButton Hospital;
     private javax.swing.JButton PAT;
+    private javax.swing.JButton Search;
     private javax.swing.JSplitPane SplitPane;
     private javax.swing.JPanel controlJPanel;
     private javax.swing.JPanel displayJPanel;

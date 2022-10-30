@@ -143,7 +143,7 @@ public class HospitalLogin extends javax.swing.JPanel {
         if(UserField.getText().equals("Admin")&&PasswordField.getText().equals("Admin"))
         {
            
-          Search hospitalPanel = new Search(displayJpanel, system);
+          Selection hospitalPanel = new Selection(displayJpanel, system);
          displayJpanel.add("UserLogin",hospitalPanel);
         CardLayout cardLayout = (CardLayout) displayJpanel.getLayout();
         cardLayout.next(displayJpanel);
