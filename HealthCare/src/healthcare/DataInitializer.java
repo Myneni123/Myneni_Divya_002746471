@@ -33,12 +33,12 @@ public class DataInitializer {
         EncounterHistory p1encounterhistory = new EncounterHistory(p1encounterslist);
         
         Patient p1 = new Patient(p1encounterhistory);
-        Person person1 = new Person("Shiva",23.5,"Male",true,p1);
+        Person person1 = new Person("Rahul",23.5,"Male",true,p1);
         
         //Person2
-        VitalSigns p2vs1 = new VitalSigns(65.20, 118, 80, 5.70, 39.8, 94, 19);
+        VitalSigns p2vs1 = new VitalSigns(65.00, 118, 80, 5.70, 39.8, 94, 19);
         VitalSigns p2vs2 = new VitalSigns(64.60, 85, 95, 5.70, 40.5, 93, 20);
-        VitalSigns p2vs3 = new VitalSigns(66.80, 142, 94, 5.70, 38.3, 96, 18);
+        VitalSigns p2vs3 = new VitalSigns(66.8, 142, 94, 5.70, 38.3, 96, 18);
         
         Encounter p2Enc1 = new Encounter(p2vs1);
         Encounter p2Enc2 = new Encounter(p2vs2);
@@ -51,17 +51,17 @@ public class DataInitializer {
         EncounterHistory p2encounterhistory = new EncounterHistory(p2encounterslist);
        
         Patient p2 = new Patient(p2encounterhistory);
-        Person person2 = new Person("Jennifer",26.0,"Female",false,p2);
+        Person person2 = new Person("Lisa",26.0,"Female",false,p2);
         
         List<Person> house1Persons = new ArrayList<>();
         house1Persons.add(person1);
         house1Persons.add(person2);
         
-        House jPHouse1 = new House("24 Heath Street", "MA", "USA", house1Persons);
+        House jPHouse1 = new House("Alphonsus Street", "MA", "USA", house1Persons);
         List<House> jphouses = new ArrayList<>();
         jphouses.add(jPHouse1);
         
-        Community jpCommunity = new Community("Huntington Avenue",1000,jphouses);
+        Community jpCommunity = new Community("Roxbury Avenue",100,jphouses);
         List<Community> jpCommunities = new ArrayList<>();
         jpCommunities.add(jpCommunity);
         

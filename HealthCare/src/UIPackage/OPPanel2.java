@@ -5,6 +5,8 @@
 package UIPackage;
 
 import healthcare.System1;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -206,6 +208,18 @@ public class OPPanel2 extends javax.swing.JPanel {
 
     private void SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveActionPerformed
         // TODO add your handling code here:
+        String RegxName = "[A-Za-z]+";
+        String RegxNum = "^100|[1-9]?\\d$";
+        Pattern patt = Pattern.compile(RegxName);
+        Pattern patt1 = Pattern.compile(RegxNum);
+        Matcher match = patt.matcher(txtpatientname.getText());
+        Matcher match1 =  patt1.matcher(txtage.getText());
+        Matcher match2 = patt.matcher(txtilliness.getText());
+        
+        if(!match.matches() || !match1.matches() || !match2.matches()) {
+            
+            JOptionPane.showMessageDialog(this, "Please enter valid details.");
+        } else {
       
         String Name=txtpatientname.getText();
         String Age=txtage.getText();
@@ -215,9 +229,16 @@ public class OPPanel2 extends javax.swing.JPanel {
         Emergency.setText(em.getSelectedItem().toString());
         Married.setText(marry.getSelectedItem().toString());
         JOptionPane.showMessageDialog(this, "Patient Name: "+Name+"\nAge: "+Age+"\nIllness: "+Illness+"\nRegistration form submitted");
-        
+       
+        txtpatientname.setText("");
+        txtage.setText("");
+        txtilliness.setText("");
+        txtgender.setSelectedIndex(0);
+       marry.setSelectedIndex(0);
+       fee.setSelectedIndex(0);
+       em.setSelectedIndex(0);
     }//GEN-LAST:event_SaveActionPerformed
-
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Consultation;
