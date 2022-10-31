@@ -38,6 +38,7 @@ public class DataHospital {
         cities.add(bostonCity);
         
         
+        
          List<Doctor> DoctorsList = new ArrayList<>();
         DoctorsList.add(d1);
        DoctorsList.add(d2);

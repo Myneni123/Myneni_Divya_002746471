@@ -57,7 +57,7 @@ public class DataInitializer {
         house1Persons.add(person1);
         house1Persons.add(person2);
         
-        House jPHouse1 = new House("Alphonsus Street", "MA", "USA", house1Persons);
+        House jPHouse1 = new House("Alphonsus Street", "Massachusetts", "USA", house1Persons);
         List<House> jphouses = new ArrayList<>();
         jphouses.add(jPHouse1);
         
