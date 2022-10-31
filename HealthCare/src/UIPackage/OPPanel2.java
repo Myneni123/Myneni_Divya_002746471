@@ -89,6 +89,7 @@ public class OPPanel2 extends javax.swing.JPanel {
             }
         });
 
+        Save.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/Save.png"))); // NOI18N
         Save.setText("Save");
         Save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

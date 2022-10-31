@@ -57,7 +57,7 @@
                       <Component id="housesJLabel" min="-2" pref="460" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="301" max="32767" attributes="0"/>
+              <EmptySpace pref="264" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
@@ -126,6 +126,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="addJButton">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/UIPackage/Save.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Add"/>
       </Properties>
       <Events>
@@ -134,6 +137,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="deleteJButton">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/UIPackage/delete.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Delete"/>
       </Properties>
       <Events>
@@ -142,6 +148,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="updateJButton">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/UIPackage/edit.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Update"/>
       </Properties>
       <Events>

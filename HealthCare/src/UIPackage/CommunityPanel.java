@@ -69,6 +69,7 @@ public class CommunityPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 204, 204));
 
+        addJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/Save.png"))); // NOI18N
         addJButton.setText("Add");
         addJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,6 +77,7 @@ public class CommunityPanel extends javax.swing.JPanel {
             }
         });
 
+        updateJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/edit.png"))); // NOI18N
         updateJButton.setText("Update");
         updateJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,6 +141,7 @@ public class CommunityPanel extends javax.swing.JPanel {
             }
         });
 
+        deleteJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/delete.png"))); // NOI18N
         deleteJButton.setText("Delete");
         deleteJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,7 +182,7 @@ public class CommunityPanel extends javax.swing.JPanel {
                                 .addComponent(deleteJButton)))
                         .addGap(34, 34, 34)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

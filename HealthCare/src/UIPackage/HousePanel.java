@@ -80,6 +80,7 @@ public class HousePanel extends javax.swing.JPanel {
             }
         });
 
+        addJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/Save.png"))); // NOI18N
         addJButton.setText("Add");
         addJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +88,7 @@ public class HousePanel extends javax.swing.JPanel {
             }
         });
 
+        deleteJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/delete.png"))); // NOI18N
         deleteJButton.setText("Delete");
         deleteJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,6 +96,7 @@ public class HousePanel extends javax.swing.JPanel {
             }
         });
 
+        updateJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/edit.png"))); // NOI18N
         updateJButton.setText("Update");
         updateJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,7 +211,7 @@ public class HousePanel extends javax.swing.JPanel {
                         .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(housesJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(301, Short.MAX_VALUE))
+                .addContainerGap(264, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(goJButton)

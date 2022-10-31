@@ -115,6 +115,7 @@ public class HospitalPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(hospitalJTable);
 
+        addJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/Save.png"))); // NOI18N
         addJButton.setText("Add");
         addJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,6 +123,7 @@ public class HospitalPanel extends javax.swing.JPanel {
             }
         });
 
+        deleteJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/delete.png"))); // NOI18N
         deleteJButton.setText("Delete");
         deleteJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,6 +137,7 @@ public class HospitalPanel extends javax.swing.JPanel {
             }
         });
 
+        updateJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/edit.png"))); // NOI18N
         updateJButton.setText("Update");
         updateJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

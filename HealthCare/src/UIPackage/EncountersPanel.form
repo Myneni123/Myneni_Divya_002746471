@@ -157,6 +157,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="deleteJButton">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/UIPackage/delete.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Delete"/>
       </Properties>
       <Events>
@@ -165,6 +168,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="addJButton">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/UIPackage/Save.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Add New Signs"/>
       </Properties>
       <Events>
@@ -173,6 +179,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="view">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/UIPackage/edit.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="View/Update"/>
       </Properties>
       <Events>

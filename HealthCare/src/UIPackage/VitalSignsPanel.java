@@ -99,6 +99,7 @@ public class VitalSignsPanel extends javax.swing.JPanel {
         bloodPressureSystolicJLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         bloodPressureSystolicJLabel.setText("Blood Pressure Systolic :");
 
+        updateJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/edit.png"))); // NOI18N
         updateJButton.setText("Update");
         updateJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -59,6 +59,7 @@ public class AddNewCommunity extends javax.swing.JPanel {
 
         communityNameJLabel.setText("Community Name :");
 
+        addJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/Save.png"))); // NOI18N
         addJButton.setText("Add");
         addJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

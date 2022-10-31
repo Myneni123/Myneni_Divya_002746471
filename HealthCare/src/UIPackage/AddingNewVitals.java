@@ -102,6 +102,7 @@ public class AddingNewVitals extends javax.swing.JPanel {
         respirationRateJLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         respirationRateJLabel.setText("Respiration Rate :");
 
+        addJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/Save.png"))); // NOI18N
         addJButton.setText("Add");
         addJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

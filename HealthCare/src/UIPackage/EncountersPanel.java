@@ -106,6 +106,7 @@ public class EncountersPanel extends javax.swing.JPanel {
         encounterHistoryJLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         encounterHistoryJLabel.setText(" Encounters History");
 
+        deleteJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/delete.png"))); // NOI18N
         deleteJButton.setText("Delete");
         deleteJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,6 +114,7 @@ public class EncountersPanel extends javax.swing.JPanel {
             }
         });
 
+        addJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/Save.png"))); // NOI18N
         addJButton.setText("Add New Signs");
         addJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,6 +122,7 @@ public class EncountersPanel extends javax.swing.JPanel {
             }
         });
 
+        view.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UIPackage/edit.png"))); // NOI18N
         view.setText("View/Update");
         view.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
