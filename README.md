@@ -7,3 +7,4 @@ Patients can make appointments with the nearby city hospitals.
 Doctors will be able to leave a record of the vital Signs
 Different administrators will be able to perform different operations for the model/application.
 All administrators should be able to perform CRUD operations on their systems
+![classdiagram](https://user-images.githubusercontent.com/114035799/199143494-6e43b8da-54a0-4468-ac9e-5386895d27e5.png)
